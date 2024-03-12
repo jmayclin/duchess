@@ -94,6 +94,9 @@ mod auto {
             public abstract java.lang.String toString();
         }
 
+        public interface java.lang.Runnable {
+            public abstract void run();
+        }
 
         package java.util;
 
@@ -352,6 +355,154 @@ mod auto {
             // public java.nio.channels.FileChannel getChannel();
             // static {};
         }
+
+        package java.nio;
+
+        class java.nio.Buffer {
+            // static final jdk.internal.misc.Unsafe UNSAFE;
+            // static final jdk.internal.misc.ScopedMemoryAccess SCOPED_MEMORY_ACCESS;
+            // static final int SPLITERATOR_CHARACTERISTICS;
+            // long address;
+            // final java.lang.foreign.MemorySegment segment;
+            // static final boolean $assertionsDisabled;
+            // java.nio.Buffer(long, int, java.lang.foreign.MemorySegment);
+            // java.nio.Buffer(int, int, int, int, java.lang.foreign.MemorySegment);
+            // static java.lang.IllegalArgumentException createSameBufferException();
+            // static java.lang.IllegalArgumentException createCapacityException(int);
+            public final int capacity();
+            public final int position();
+            // public java.nio.Buffer position(int);
+            public final int limit();
+            // public java.nio.Buffer limit(int);
+            public java.nio.Buffer mark();
+            // public java.nio.Buffer reset();
+            // public java.nio.Buffer clear();
+            public java.nio.Buffer flip();
+            // public java.nio.Buffer rewind();
+            // public final int remaining();
+            // public final boolean hasRemaining();
+            // public abstract boolean isReadOnly();
+            // public abstract boolean hasArray();
+            // public abstract java.lang.Object array();
+            // public abstract int arrayOffset();
+            // public abstract boolean isDirect();
+            // public abstract java.nio.Buffer slice();
+            // public abstract java.nio.Buffer slice(int, int);
+            // public abstract java.nio.Buffer duplicate();
+            // abstract java.lang.Object base();
+            // final int nextGetIndex();
+            // final int nextGetIndex(int);
+            // final int nextPutIndex();
+            // final int nextPutIndex(int);
+            // final int checkIndex(int);
+            // final int checkIndex(int, int);
+            // final int markValue();
+            // final void discardMark();
+            // final jdk.internal.foreign.MemorySessionImpl session();
+            // final void checkSession();
+            // static {};
+          }    
+
+        public abstract class java.nio.ByteBuffer extends java.nio.Buffer { // implements java.lang.Comparable<java.nio.ByteBuffer>
+            // final byte[] hb;
+            // final int offset;
+            // boolean isReadOnly;
+            // boolean bigEndian;
+            // boolean nativeByteOrder;
+            // static final boolean $assertionsDisabled;
+            // java.nio.ByteBuffer(int, int, int, int, byte[], int, java.lang.foreign.MemorySegment);
+            // java.nio.ByteBuffer(int, int, int, int, java.lang.foreign.MemorySegment);
+            // java.nio.ByteBuffer(byte[], long, int, java.lang.foreign.MemorySegment);
+            // java.lang.Object base();
+            // public static java.nio.ByteBuffer allocateDirect(int);
+            public static java.nio.ByteBuffer allocate(int);
+            // public static java.nio.ByteBuffer wrap(byte[], int, int);
+            public static java.nio.ByteBuffer wrap(byte[]);
+            public abstract java.nio.ByteBuffer slice();
+            // public abstract java.nio.ByteBuffer slice(int, int);
+            // public abstract java.nio.ByteBuffer duplicate();
+            // public abstract java.nio.ByteBuffer asReadOnlyBuffer();
+            // public abstract byte get();
+            // public abstract java.nio.ByteBuffer put(byte);
+            // public abstract byte get(int);
+            // public abstract java.nio.ByteBuffer put(int, byte);
+            // public java.nio.ByteBuffer get(byte[], int, int);
+            // public java.nio.ByteBuffer get(byte[]);
+            // public java.nio.ByteBuffer get(int, byte[], int, int);
+            // public java.nio.ByteBuffer get(int, byte[]);
+            // public java.nio.ByteBuffer put(java.nio.ByteBuffer);
+            // public java.nio.ByteBuffer put(int, java.nio.ByteBuffer, int, int);
+            // void putBuffer(int, java.nio.ByteBuffer, int, int);
+            // public java.nio.ByteBuffer put(byte[], int, int);
+            public final java.nio.ByteBuffer put(byte[]);
+            // public java.nio.ByteBuffer put(int, byte[], int, int);
+            // public java.nio.ByteBuffer put(int, byte[]);
+            // java.nio.ByteBuffer putArray(int, byte[], int, int);
+            // public final boolean hasArray();
+            public final byte[] array();
+            // public final int arrayOffset();
+            public java.nio.ByteBuffer position(int);
+            // public java.nio.ByteBuffer limit(int);
+            // public java.nio.ByteBuffer mark();
+            // public java.nio.ByteBuffer reset();
+            public java.nio.ByteBuffer clear();
+            // public java.nio.ByteBuffer flip();
+            // public java.nio.ByteBuffer rewind();
+            // public abstract java.nio.ByteBuffer compact();
+            // public abstract boolean isDirect();
+            // public java.lang.String toString();
+            // public int hashCode();
+            // public boolean equals(java.lang.Object);
+            // public int compareTo(java.nio.ByteBuffer);
+            // public int mismatch(java.nio.ByteBuffer);
+            // public final java.nio.ByteOrder order();
+            // public final java.nio.ByteBuffer order(java.nio.ByteOrder);
+            // public final int alignmentOffset(int, int);
+            // public final java.nio.ByteBuffer alignedSlice(int);
+            // public abstract char getChar();
+            // public abstract java.nio.ByteBuffer putChar(char);
+            // public abstract char getChar(int);
+            // public abstract java.nio.ByteBuffer putChar(int, char);
+            // public abstract java.nio.CharBuffer asCharBuffer();
+            // public abstract short getShort();
+            // public abstract java.nio.ByteBuffer putShort(short);
+            // public abstract short getShort(int);
+            // public abstract java.nio.ByteBuffer putShort(int, short);
+            // public abstract java.nio.ShortBuffer asShortBuffer();
+            // public abstract int getInt();
+            // public abstract java.nio.ByteBuffer putInt(int);
+            // public abstract int getInt(int);
+            // public abstract java.nio.ByteBuffer putInt(int, int);
+            // public abstract java.nio.IntBuffer asIntBuffer();
+            // public abstract long getLong();
+            // public abstract java.nio.ByteBuffer putLong(long);
+            // public abstract long getLong(int);
+            // public abstract java.nio.ByteBuffer putLong(int, long);
+            // public abstract java.nio.LongBuffer asLongBuffer();
+            // public abstract float getFloat();
+            // public abstract java.nio.ByteBuffer putFloat(float);
+            // public abstract float getFloat(int);
+            // public abstract java.nio.ByteBuffer putFloat(int, float);
+            // public abstract java.nio.FloatBuffer asFloatBuffer();
+            // public abstract double getDouble();
+            // public abstract java.nio.ByteBuffer putDouble(double);
+            // public abstract double getDouble(int);
+            // public abstract java.nio.ByteBuffer putDouble(int, double);
+            // public abstract java.nio.DoubleBuffer asDoubleBuffer();
+            // public java.nio.Buffer duplicate();
+            // public java.nio.Buffer slice(int, int);
+            // public java.nio.Buffer slice();
+            // public java.lang.Object array();
+            // public java.nio.Buffer rewind();
+            // public java.nio.Buffer flip();
+            // public java.nio.Buffer clear();
+            // public java.nio.Buffer reset();
+            // public java.nio.Buffer mark();
+            // public java.nio.Buffer limit(int);
+            // public java.nio.Buffer position(int);
+            // public int compareTo(java.lang.Object);
+            // static {};
+          }
 
         package java.security;
     

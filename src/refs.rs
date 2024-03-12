@@ -1,8 +1,5 @@
 use crate::{cast::Upcast, java::lang::Throwable, Error, Global, JavaObject, Local};
 
-// isn't the IntoWhatever trait drastically underspecified?
-// IntoJava -> AsJRef -> TryJDeref
-
 /// Possibly null reference to a Java object. This is the trait that IntoJava relies on
 pub trait AsJRef<U>: TryJDeref {
     fn as_jref(&self) -> Nullable<&U>;
