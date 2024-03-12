@@ -1231,7 +1231,7 @@ impl ClassInfo {
                 ),
                 NonRepeatingType::Ref(_) => quote_spanned!(self.span =>
                     let #input_name = self.#input_name.into_java(jvm)?;
-                    let #input_name = duchess::prelude::AsJRef::as_jref(&#input_name)?;
+                    let #input_name = duchess::prelude::AsJRef::as_jref(&#input_name);
                 ),
             })
             .collect()

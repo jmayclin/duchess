@@ -13,7 +13,7 @@ use std::{
 
 use jni_sys::jvalue;
 
-use crate::{jvm::JavaObjectExt, Error, GlobalResult, JavaObject, Local};
+use crate::{jvm::JavaObjectExt, AsJRef, Error, GlobalResult, JavaObject, Local, Nullable};
 
 const VERSION: jni_sys::jint = jni_sys::JNI_VERSION_1_8;
 
@@ -426,6 +426,20 @@ impl<T: JavaObject> IntoJniValue for Option<&T> {
     fn into_jni_value(self) -> jvalue {
         self.map(|v| v.into_jni_value())
             .unwrap_or(jvalue { l: ptr::null_mut() })
+    }
+}
+
+impl<T> IntoJniValue for Nullable<&T>
+where
+    T: JavaObject,
+{
+    fn into_jni_value(self) -> jvalue {
+        match self {
+            Ok(t) => jvalue {
+                l: t.as_raw().as_ptr(),
+            },
+            Err(_) => jvalue { l: ptr::null_mut() },
+        }
     }
 }
 

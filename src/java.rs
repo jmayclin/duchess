@@ -432,6 +432,17 @@ mod auto {
     }
 }
 
+// pub struct NullObject { }
+    
+// impl<'a> duchess::IntoJava<java::security::SecureRandom> for MyNull {
+//     type Output<'jvm>: AsJRef<T>;
+
+//     fn into_java<'jvm>(self, jvm: &mut duchess::Jvm<'jvm>) -> duchess::Result<'jvm, Self::Output<'jvm>> {
+//         todo!()
+//     }
+// }
+
+
 pub use auto::java::*;
 
 // XX this isn't a real class in the JVM, since each array type (e.g. Foo[] and int[]) is just a subclass of Object.
