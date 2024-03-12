@@ -314,6 +314,121 @@ mod auto {
             // public int compareTo(java.lang.Object);
         }
 
+        package java.io;
+
+        class InputStream {
+            // public java.io.InputStream();
+            // public static java.io.InputStream nullInputStream();
+            // public abstract int read() throws java.io.IOException;
+            // public int read(byte[]) throws java.io.IOException;
+            // public int read(byte[], int, int) throws java.io.IOException;
+            // public byte[] readAllBytes() throws java.io.IOException;
+            // public byte[] readNBytes(int) throws java.io.IOException;
+            // public int readNBytes(byte[], int, int) throws java.io.IOException;
+            // public long skip(long) throws java.io.IOException;
+            // public void skipNBytes(long) throws java.io.IOException;
+            // public int available() throws java.io.IOException;
+            // public void close() throws java.io.IOException;
+            // public void mark(int);
+            // public void reset() throws java.io.IOException;
+            // public boolean markSupported();
+            // public long transferTo(java.io.OutputStream) throws java.io.IOException;
+        }
+
+        class FileInputStream extends java.io.InputStream {
+            public java.io.FileInputStream(java.lang.String);
+            // public java.io.FileInputStream(java.io.File) throws java.io.FileNotFoundException;
+            // public java.io.FileInputStream(java.io.FileDescriptor);
+            // public int read() throws java.io.IOException;
+            // public int read(byte[]) throws java.io.IOException;
+            // public int read(byte[], int, int) throws java.io.IOException;
+            // public byte[] readAllBytes() throws java.io.IOException;
+            // public byte[] readNBytes(int) throws java.io.IOException;
+            // public long transferTo(java.io.OutputStream) throws java.io.IOException;
+            // public long skip(long) throws java.io.IOException;
+            // public int available() throws java.io.IOException;
+            // public void close() throws java.io.IOException;
+            // public final java.io.FileDescriptor getFD() throws java.io.IOException;
+            // public java.nio.channels.FileChannel getChannel();
+            // static {};
+        }
+
+        package java.security;
+    
+        class SecureRandom {
+            //static final long serialVersionUID;
+            public java.security.SecureRandom();
+            // public java.security.SecureRandom(byte[]);
+            // protected java.security.SecureRandom(java.security.SecureRandomSpi, java.security.Provider);
+            // public static java.security.SecureRandom getInstance(java.lang.String) throws java.security.NoSuchAlgorithmException;
+            // public static java.security.SecureRandom getInstance(java.lang.String, java.lang.String) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException;
+            // public static java.security.SecureRandom getInstance(java.lang.String, java.security.Provider) throws java.security.NoSuchAlgorithmException;
+            // public static java.security.SecureRandom getInstance(java.lang.String, java.security.SecureRandomParameters) throws java.security.NoSuchAlgorithmException;
+            // public static java.security.SecureRandom getInstance(java.lang.String, java.security.SecureRandomParameters, java.lang.String) throws java.security.NoSuchAlgorithmException, java.security.NoSuchProviderException;
+            // public static java.security.SecureRandom getInstance(java.lang.String, java.security.SecureRandomParameters, java.security.Provider) throws java.security.NoSuchAlgorithmException;
+            // public final java.security.Provider getProvider();
+            // public java.lang.String getAlgorithm();
+            // public java.lang.String toString();
+            // public java.security.SecureRandomParameters getParameters();
+            // public void setSeed(byte[]);
+            // public void setSeed(long);
+            public void nextBytes(byte[]);
+            // public void nextBytes(byte[], java.security.SecureRandomParameters);
+            // protected final int next(int);
+            // public static byte[] getSeed(int);
+            // public byte[] generateSeed(int);
+            // public static java.security.SecureRandom getInstanceStrong() throws java.security.NoSuchAlgorithmException;
+            // public void reseed();
+            // public void reseed(java.security.SecureRandomParameters);
+            // static {};
+        }
+
+        class KeyStore {
+            // protected java.security.KeyStore(java.security.KeyStoreSpi, java.security.Provider, java.lang.String);
+            public static java.security.KeyStore getInstance(java.lang.String) throws java.security.KeyStoreException;
+            // public static java.security.KeyStore getInstance(java.lang.String, java.lang.String) throws java.security.KeyStoreException, java.security.NoSuchProviderException;
+            // public static java.security.KeyStore getInstance(java.lang.String, java.security.Provider) throws java.security.KeyStoreException;
+            public static final java.lang.String getDefaultType();
+            // public final java.security.Provider getProvider();
+            // public final java.lang.String getType();
+            // public final java.util.Set<java.security.KeyStore$Entry$Attribute> getAttributes(java.lang.String) throws java.security.KeyStoreException;
+            // public final java.security.Key getKey(java.lang.String, char[]) throws java.security.KeyStoreException, java.security.NoSuchAlgorithmException, java.security.UnrecoverableKeyException;
+            // public final java.security.cert.Certificate[] getCertificateChain(java.lang.String) throws java.security.KeyStoreException;
+            // public final java.security.cert.Certificate getCertificate(java.lang.String) throws java.security.KeyStoreException;
+            // public final java.util.Date getCreationDate(java.lang.String) throws java.security.KeyStoreException;
+            // public final void setKeyEntry(java.lang.String, java.security.Key, char[], java.security.cert.Certificate[]) throws java.security.KeyStoreException;
+            // public final void setKeyEntry(java.lang.String, byte[], java.security.cert.Certificate[]) throws java.security.KeyStoreException;
+            public final void setCertificateEntry(java.lang.String, java.security.cert.Certificate) throws java.security.KeyStoreException;
+            // public final void deleteEntry(java.lang.String) throws java.security.KeyStoreException;
+            // public final java.util.Enumeration<java.lang.String> aliases() throws java.security.KeyStoreException;
+            // public final boolean containsAlias(java.lang.String) throws java.security.KeyStoreException;
+            // public final int size() throws java.security.KeyStoreException;
+            // public final boolean isKeyEntry(java.lang.String) throws java.security.KeyStoreException;
+            // public final boolean isCertificateEntry(java.lang.String) throws java.security.KeyStoreException;
+            // public final java.lang.String getCertificateAlias(java.security.cert.Certificate) throws java.security.KeyStoreException;
+            // public final void store(java.io.OutputStream, char[]) throws java.security.KeyStoreException, java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            // public final void store(java.security.KeyStore$LoadStoreParameter) throws java.security.KeyStoreException, java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            public final void load(java.io.InputStream, char[]) throws java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            // public final void load(java.security.KeyStore$LoadStoreParameter) throws java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            // public final java.security.KeyStore$Entry getEntry(java.lang.String, java.security.KeyStore$ProtectionParameter) throws java.security.NoSuchAlgorithmException, java.security.UnrecoverableEntryException, java.security.KeyStoreException;
+            // public final void setEntry(java.lang.String, java.security.KeyStore$Entry, java.security.KeyStore$ProtectionParameter) throws java.security.KeyStoreException;
+            // public final boolean entryInstanceOf(java.lang.String, java.lang.Class<? extends java.security.KeyStore$Entry>) throws java.security.KeyStoreException;
+            // public static final java.security.KeyStore getInstance(java.io.File, char[]) throws java.security.KeyStoreException, java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            // public static final java.security.KeyStore getInstance(java.io.File, java.security.KeyStore$LoadStoreParameter) throws java.security.KeyStoreException, java.io.IOException, java.security.NoSuchAlgorithmException, java.security.cert.CertificateException;
+            // static {};
+        }
+
+        package java.security.cert;
+
+        class CertificateFactory {
+            public static final java.security.cert.CertificateFactory getInstance(java.lang.String) throws java.security.cert.CertificateException;
+            public final java.security.cert.Certificate generateCertificate(java.io.InputStream) throws java.security.cert.CertificateException;
+        }
+
+        class Certificate {
+
+        }
+
     }
 }
 
